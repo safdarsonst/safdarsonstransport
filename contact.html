@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Safdar & Sons Transport Ltd</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+  <a href="index.html" class="logo">
+    <h1>SST</h1>
+    <p>Speed and Strength in Every Mile</p>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="clients.html">Clients</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-container">
+    <!-- Contact Form -->
+    <div class="contact-box" id="contact-box">
+      <h2>Get in Touch</h2>
+      <form id="contactForm" action="https://formsubmit.co/info@safdarsonstransport.co.uk" method="POST">
+        <!-- Hidden fields -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Message from Safdar & Sons - Website Form">
+        <input type="hidden" name="_template" value="table">
+
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="Name" required>
+
+        <label for="company">Company Name *</label>
+        <input type="text" id="company" name="Company" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="phone">Telephone</label>
+        <input type="tel" id="phone" name="Telephone">
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="success-message" id="success-message">
+        <i class="fa fa-check-circle"></i> Message Sent
+      </div>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="contact-box">
+      <h2>Contact Details</h2>
+
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="contact-text">
+          <a href="mailto:info@safdarsonstransport.co.uk">info@safdarsonstransport.co.uk</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="contact-text">
+          <a href="tel:+440388488180">0388488180</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="contact-text">
+          130 Manchester Rd, Carrington<br>
+          Manchester M31 4QR
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="contact-text">
+          Mon – Fri: 07:00 – 18:00<br>
+          Sat: 09:00 – 18:00
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Safdar & Sons Transport Ltd | All Rights Reserved</p>
+    <p>130 Manchester Rd, Carrington, Manchester M31 4QR | 
+      <a href="mailto:info@safdarsonstransport.co.uk">info@safdarsonstransport.co.uk</a> | 0388488180</p>
+  </footer>
+
+  <!-- ===== JS FOR SUCCESS MESSAGE ===== -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+      } else {
+        alert('There was a problem sending your message. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>

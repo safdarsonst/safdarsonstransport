@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safdar & Sons Transport Ltd | Where Reliability Meets Speed</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+  <a href="index.html" class="logo">
+    <h1>SST</h1>
+    <p>Speed and Strength in Every Mile</p>
+  </a>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="clients.html">Clients</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+  <!-- ===== HERO CAROUSEL ===== -->
+  <section class="hero-carousel">
+    <div class="overlay">
+      <h2>SST</h2>
+      <p>Where Reliability Meets Speed</p>
+    </div>
+
+    <!-- Slides -->
+    <div class="slides fade" style="background-image: url('front_ofj.jpg');"></div>
+    <div class="slides fade" style="background-image: url('mfz.jpeg');"></div>
+    <div class="slides fade" style="background-image: url('front_lclofj.jpg');"></div>
+    <div class="slides fade" style="background-image: url('r_ofjlcl.jpg');"></div>
+    <div class="slides fade" style="background-image: url('lclofj.jpg');"></div>
+    <div class="slides fade" style="background-image: url('lmfz.jpeg');"></div>
+    <div class="slides fade" style="background-image: url('lcl.jpg');"></div>
+    <div class="slides fade" style="background-image: url('Ulc.jpg');"></div>
+    <div class="slides fade" style="background-image: url('s_ofj.jpg');"></div>
+  </section>
+
+  <!-- ===== OUR BUSINESS ===== -->
+  <section class="business">
+    <h2>Our Business</h2>
+    <p>At <strong>Safdar & Sons Transport Ltd</strong>, we provide reliable subcontracted transport services to companies across the UK. Whether it’s scheduled deliveries or urgent loads, we take pride in meeting every client’s requirements with efficiency and flexibility.</p>
+    <p>Our fleet of over seven vehicles operates nationwide, day and night, ensuring goods reach their destinations safely and on time. Our experienced drivers are trained to the highest standards, delivering a service that is speedy, dependable, and professional.</p>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features">
+    <div class="feature">
+      <i class="fa-solid fa-pound-sign icon"></i>
+      <h3>Competitive Rates</h3>
+      <p>We offer some of the most competitive rates on the market. <a href="contact.html">Contact us today</a> for a personalised quote and discover how much you can save.</p>
+    </div>
+
+    <div class="feature">
+      <i class="fa-solid fa-users icon"></i>
+      <h3>Professional Team</h3>
+      <p>Our drivers are highly trained and experienced, ensuring every delivery meets the highest standards of safety, reliability, and professionalism.</p>
+    </div>
+
+    <div class="feature">
+      <i class="fa-solid fa-truck icon"></i>
+      <h3>Growing Fleet</h3>
+      <p>Our fleet of vehicles is continuously expanding to meet the evolving needs of our customers and provide nationwide coverage.</p>
+    </div>
+  </section>
+
+  <!-- ===== DELIVERY BOX ===== -->
+  <section class="delivery">
+    <div class="delivery-box">
+      <h3><i class="fa-solid fa-road"></i>Reliable Coverage Across the UK</h3>
+      <p>From scheduled routes to urgent deliveries, our expanding fleet ensures that your goods reach every corner of the country — safely, efficiently, and on time.</p>
+      <div class="buttons">
+        <a href="clients.html" class="button">View Our Clients</a>
+        <a href="contact.html" class="button">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Safdar & Sons Transport Ltd | All Rights Reserved</p>
+    <p>130 Manchester Rd, Carrington, Manchester M31 4QR | <a href="mailto:info@safdarsonstransport.co.uk">info@safdarsonstransport.co.uk</a> | 0388488180</p>
+  </footer>
+
+  <!-- ===== JS: CAROUSEL SLIDE FUNCTION ===== -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slides");
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) slides[i].style.opacity = 0;
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.opacity = 1;
+      setTimeout(showSlides, 5000); // Change every 5s
+    }
+    showSlides();
+  </script>
+</body>
+</html>
